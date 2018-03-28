@@ -1,0 +1,436 @@
+license@license-VirtualBox:~$ git clone https://github.com/tzutalin/labelImg.gitCloning into 'labelImg'...
+remote: Counting objects: 1207, done.
+remote: Compressing objects: 100% (25/25), done.
+remote: Total 1207 (delta 14), reused 12 (delta 6), pack-reused 1176
+Receiving objects: 100% (1207/1207), 232.43 MiB | 175.00 KiB/s, done.
+Resolving deltas: 100% (686/686), done.
+Checking connectivity... done.
+license@license-VirtualBox:~$ git clone https://github.com/cocodataset/cocoapi.git
+Cloning into 'cocoapi'...
+remote: Counting objects: 927, done.
+remote: Total 927 (delta 0), reused 0 (delta 0), pack-reused 927
+Receiving objects: 100% (927/927), 11.68 MiB | 97.00 KiB/s, done.
+Resolving deltas: 100% (554/554), done.
+Checking connectivity... done.
+license@license-VirtualBox:~$ cd cocoapi/PythonAPI
+license@license-VirtualBox:~/cocoapi/PythonAPI$ make
+python setup.py build_ext --inplace
+Traceback (most recent call last):
+  File "setup.py", line 2, in <module>
+    from Cython.Build import cythonize
+ImportError: No module named Cython.Build
+Makefile:3: recipe for target 'all' failed
+make: *** [all] Error 1
+license@license-VirtualBox:~/cocoapi/PythonAPI$ sudo make
+[sudo] password for license: 
+python setup.py build_ext --inplace
+Traceback (most recent call last):
+  File "setup.py", line 2, in <module>
+    from Cython.Build import cythonize
+ImportError: No module named Cython.Build
+Makefile:3: recipe for target 'all' failed
+make: *** [all] Error 1
+license@license-VirtualBox:~/cocoapi/PythonAPI$ pip3 install Cython
+Requirement already satisfied: Cython in /usr/local/lib/python3.5/dist-packages
+You are using pip version 9.0.2, however version 9.0.3 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+license@license-VirtualBox:~/cocoapi/PythonAPI$ sudo make
+python setup.py build_ext --inplace
+Traceback (most recent call last):
+  File "setup.py", line 2, in <module>
+    from Cython.Build import cythonize
+ImportError: No module named Cython.Build
+Makefile:3: recipe for target 'all' failed
+make: *** [all] Error 1
+license@license-VirtualBox:~/cocoapi/PythonAPI$ sudo pip install Cython
+sudo: pip: command not found
+license@license-VirtualBox:~/cocoapi/PythonAPI$ sudo pip3 install Cython
+The directory '/home/license/.cache/pip/http' or its parent directory is not owned by the current user and the cache has been disabled. Please check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
+The directory '/home/license/.cache/pip' or its parent directory is not owned by the current user and caching wheels has been disabled. check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
+Requirement already satisfied: Cython in /usr/local/lib/python3.5/dist-packages
+You are using pip version 9.0.2, however version 9.0.3 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+license@license-VirtualBox:~/cocoapi/PythonAPI$ pip2 install Cython
+The program 'pip2' is currently not installed. You can install it by typing:
+sudo apt install python-pip
+license@license-VirtualBox:~/cocoapi/PythonAPI$ sudo make
+python setup.py build_ext --inplace
+Traceback (most recent call last):
+  File "setup.py", line 2, in <module>
+    from Cython.Build import cythonize
+ImportError: No module named Cython.Build
+Makefile:3: recipe for target 'all' failed
+make: *** [all] Error 1
+license@license-VirtualBox:~/cocoapi/PythonAPI$ python3 setup.py install
+Compiling pycocotools/_mask.pyx because it changed.
+[1/1] Cythonizing pycocotools/_mask.pyx
+running install
+running build
+running build_py
+creating build
+creating build/lib.linux-x86_64-3.5
+creating build/lib.linux-x86_64-3.5/pycocotools
+copying pycocotools/mask.py -> build/lib.linux-x86_64-3.5/pycocotools
+copying pycocotools/cocoeval.py -> build/lib.linux-x86_64-3.5/pycocotools
+copying pycocotools/coco.py -> build/lib.linux-x86_64-3.5/pycocotools
+copying pycocotools/__init__.py -> build/lib.linux-x86_64-3.5/pycocotools
+running build_ext
+building 'pycocotools._mask' extension
+creating build/temp.linux-x86_64-3.5
+creating build/temp.linux-x86_64-3.5/pycocotools
+creating build/common
+x86_64-linux-gnu-gcc -pthread -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -g -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -I/usr/local/lib/python3.5/dist-packages/numpy/core/include -I../common -I/usr/include/python3.5m -c pycocotools/_mask.c -o build/temp.linux-x86_64-3.5/pycocotools/_mask.o -Wno-cpp -Wno-unused-function -std=c99
+x86_64-linux-gnu-gcc -pthread -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -g -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -I/usr/local/lib/python3.5/dist-packages/numpy/core/include -I../common -I/usr/include/python3.5m -c ../common/maskApi.c -o build/temp.linux-x86_64-3.5/../common/maskApi.o -Wno-cpp -Wno-unused-function -std=c99
+x86_64-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions -Wl,-z,relro -Wl,-Bsymbolic-functions -Wl,-z,relro -g -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 build/temp.linux-x86_64-3.5/pycocotools/_mask.o build/temp.linux-x86_64-3.5/../common/maskApi.o -o build/lib.linux-x86_64-3.5/pycocotools/_mask.cpython-35m-x86_64-linux-gnu.so
+running install_lib
+creating /usr/local/lib/python3.5/dist-packages/pycocotools
+error: could not create '/usr/local/lib/python3.5/dist-packages/pycocotools': Permission denied
+license@license-VirtualBox:~/cocoapi/PythonAPI$ make
+python setup.py build_ext --inplace
+Traceback (most recent call last):
+  File "setup.py", line 2, in <module>
+    from Cython.Build import cythonize
+ImportError: No module named Cython.Build
+Makefile:3: recipe for target 'all' failed
+make: *** [all] Error 1
+license@license-VirtualBox:~/cocoapi/PythonAPI$ sudo apt-get install python-dev build-essential
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+build-essential is already the newest version (12.1ubuntu2).
+The following additional packages will be installed:
+  libpython-dev libpython2.7-dev python2.7-dev
+The following NEW packages will be installed:
+  libpython-dev libpython2.7-dev python-dev python2.7-dev
+0 upgraded, 4 newly installed, 0 to remove and 30 not upgraded.
+Need to get 28.1 MB of archives.
+After this operation, 41.2 MB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://ph.archive.ubuntu.com/ubuntu xenial-updates/main amd64 libpython2.7-dev amd64 2.7.12-1ubuntu0~16.04.3 [27.8 MB]
+Get:2 http://ph.archive.ubuntu.com/ubuntu xenial-updates/main amd64 libpython-dev amd64 2.7.12-1~16.04 [7,840 B]
+Get:3 http://ph.archive.ubuntu.com/ubuntu xenial-updates/main amd64 python2.7-dev amd64 2.7.12-1ubuntu0~16.04.3 [276 kB]
+Get:4 http://ph.archive.ubuntu.com/ubuntu xenial-updates/main amd64 python-dev amd64 2.7.12-1~16.04 [1,186 B]
+Fetched 28.1 MB in 2min 54s (161 kB/s)                                         
+Selecting previously unselected package libpython2.7-dev:amd64.
+(Reading database ... 183294 files and directories currently installed.)
+Preparing to unpack .../libpython2.7-dev_2.7.12-1ubuntu0~16.04.3_amd64.deb ...
+Unpacking libpython2.7-dev:amd64 (2.7.12-1ubuntu0~16.04.3) ...
+Selecting previously unselected package libpython-dev:amd64.
+Preparing to unpack .../libpython-dev_2.7.12-1~16.04_amd64.deb ...
+Unpacking libpython-dev:amd64 (2.7.12-1~16.04) ...
+Selecting previously unselected package python2.7-dev.
+Preparing to unpack .../python2.7-dev_2.7.12-1ubuntu0~16.04.3_amd64.deb ...
+Unpacking python2.7-dev (2.7.12-1ubuntu0~16.04.3) ...
+Selecting previously unselected package python-dev.
+Preparing to unpack .../python-dev_2.7.12-1~16.04_amd64.deb ...
+Unpacking python-dev (2.7.12-1~16.04) ...
+Processing triggers for man-db (2.7.5-1) ...
+Setting up libpython2.7-dev:amd64 (2.7.12-1ubuntu0~16.04.3) ...
+Setting up libpython-dev:amd64 (2.7.12-1~16.04) ...
+Setting up python2.7-dev (2.7.12-1ubuntu0~16.04.3) ...
+Setting up python-dev (2.7.12-1~16.04) ...
+license@license-VirtualBox:~/cocoapi/PythonAPI$ make
+python setup.py build_ext --inplace
+Traceback (most recent call last):
+  File "setup.py", line 2, in <module>
+    from Cython.Build import cythonize
+ImportError: No module named Cython.Build
+Makefile:3: recipe for target 'all' failed
+make: *** [all] Error 1
+license@license-VirtualBox:~/cocoapi/PythonAPI$ python3 setup.py install
+running install
+running build
+running build_py
+running build_ext
+running install_lib
+creating /usr/local/lib/python3.5/dist-packages/pycocotools
+error: could not create '/usr/local/lib/python3.5/dist-packages/pycocotools': Permission denied
+license@license-VirtualBox:~/cocoapi/PythonAPI$ sudo python3 setup.py install
+running install
+running build
+running build_py
+running build_ext
+running install_lib
+creating /usr/local/lib/python3.5/dist-packages/pycocotools
+copying build/lib.linux-x86_64-3.5/pycocotools/mask.py -> /usr/local/lib/python3.5/dist-packages/pycocotools
+copying build/lib.linux-x86_64-3.5/pycocotools/cocoeval.py -> /usr/local/lib/python3.5/dist-packages/pycocotools
+copying build/lib.linux-x86_64-3.5/pycocotools/coco.py -> /usr/local/lib/python3.5/dist-packages/pycocotools
+copying build/lib.linux-x86_64-3.5/pycocotools/__init__.py -> /usr/local/lib/python3.5/dist-packages/pycocotools
+copying build/lib.linux-x86_64-3.5/pycocotools/_mask.cpython-35m-x86_64-linux-gnu.so -> /usr/local/lib/python3.5/dist-packages/pycocotools
+byte-compiling /usr/local/lib/python3.5/dist-packages/pycocotools/mask.py to mask.cpython-35.pyc
+byte-compiling /usr/local/lib/python3.5/dist-packages/pycocotools/cocoeval.py to cocoeval.cpython-35.pyc
+byte-compiling /usr/local/lib/python3.5/dist-packages/pycocotools/coco.py to coco.cpython-35.pyc
+byte-compiling /usr/local/lib/python3.5/dist-packages/pycocotools/__init__.py to __init__.cpython-35.pyc
+running install_egg_info
+Writing /usr/local/lib/python3.5/dist-packages/pycocotools-2.0.egg-info
+license@license-VirtualBox:~/cocoapi/PythonAPI$ make
+python setup.py build_ext --inplace
+Traceback (most recent call last):
+  File "setup.py", line 2, in <module>
+    from Cython.Build import cythonize
+ImportError: No module named Cython.Build
+Makefile:3: recipe for target 'all' failed
+make: *** [all] Error 1
+license@license-VirtualBox:~/cocoapi/PythonAPI$ sudo apt-get install cython3
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+Suggested packages:
+  cython-doc
+The following NEW packages will be installed:
+  cython3
+0 upgraded, 1 newly installed, 0 to remove and 30 not upgraded.
+Need to get 1,540 kB of archives.
+After this operation, 7,339 kB of additional disk space will be used.
+Err:1 http://ph.archive.ubuntu.com/ubuntu xenial/universe amd64 cython3 amd64 0.23.4-0ubuntu5
+  Temporary failure resolving 'ph.archive.ubuntu.com'
+E: Failed to fetch http://ph.archive.ubuntu.com/ubuntu/pool/universe/c/cython/cython3_0.23.4-0ubuntu5_amd64.deb  Temporary failure resolving 'ph.archive.ubuntu.com'
+
+E: Unable to fetch some archives, maybe run apt-get update or try with --fix-missing?
+license@license-VirtualBox:~/cocoapi/PythonAPI$ sudo apt-get install cython3
+[sudo] password for license: 
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+Suggested packages:
+  cython-doc
+The following NEW packages will be installed:
+  cython3
+0 upgraded, 1 newly installed, 0 to remove and 30 not upgraded.
+Need to get 1,540 kB of archives.
+After this operation, 7,339 kB of additional disk space will be used.
+Get:1 http://ph.archive.ubuntu.com/ubuntu xenial/universe amd64 cython3 amd64 0.23.4-0ubuntu5 [1,540 kB]
+Fetched 1,540 kB in 11s (135 kB/s)                                             
+Selecting previously unselected package cython3.
+(Reading database ... 183429 files and directories currently installed.)
+Preparing to unpack .../cython3_0.23.4-0ubuntu5_amd64.deb ...
+Unpacking cython3 (0.23.4-0ubuntu5) ...
+Setting up cython3 (0.23.4-0ubuntu5) ...
+license@license-VirtualBox:~/cocoapi/PythonAPI$ make
+python setup.py build_ext --inplace
+Traceback (most recent call last):
+  File "setup.py", line 2, in <module>
+    from Cython.Build import cythonize
+ImportError: No module named Cython.Build
+Makefile:3: recipe for target 'all' failed
+make: *** [all] Error 1
+license@license-VirtualBox:~/cocoapi/PythonAPI$ sudo python3 setup.py install
+running install
+running build
+running build_py
+running build_ext
+running install_lib
+running install_egg_info
+Removing /usr/local/lib/python3.5/dist-packages/pycocotools-2.0.egg-info
+Writing /usr/local/lib/python3.5/dist-packages/pycocotools-2.0.egg-info
+license@license-VirtualBox:~/cocoapi/PythonAPI$ make
+python setup.py build_ext --inplace
+Traceback (most recent call last):
+  File "setup.py", line 2, in <module>
+    from Cython.Build import cythonize
+ImportError: No module named Cython.Build
+Makefile:3: recipe for target 'all' failed
+make: *** [all] Error 1
+license@license-VirtualBox:~/cocoapi/PythonAPI$ sudo python3 setup.py install
+running install
+running build
+running build_py
+running build_ext
+running install_lib
+running install_egg_info
+Removing /usr/local/lib/python3.5/dist-packages/pycocotools-2.0.egg-info
+Writing /usr/local/lib/python3.5/dist-packages/pycocotools-2.0.egg-info
+license@license-VirtualBox:~/cocoapi/PythonAPI$ cp -r pycocotools /home/license/models/research/
+license@license-VirtualBox:~/cocoapi/PythonAPI$ cd ~
+license@license-VirtualBox:~$ sudo apt-get install python3-tk
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+Suggested packages:
+  tix python3-tk-dbg
+The following NEW packages will be installed:
+  python3-tk
+0 upgraded, 1 newly installed, 0 to remove and 30 not upgraded.
+Need to get 25.1 kB of archives.
+After this operation, 89.1 kB of additional disk space will be used.
+Get:1 http://122.2.223.75:80/data/026b26aad2550560/ph.archive.ubuntu.com/ubuntu xenial/main amd64 python3-tk amd64 3.5.1-1 [25.1 kB]
+Fetched 25.1 kB in 1s (12.6 kB/s)             
+Selecting previously unselected package python3-tk.
+(Reading database ... 183737 files and directories currently installed.)
+Preparing to unpack .../python3-tk_3.5.1-1_amd64.deb ...
+Unpacking python3-tk (3.5.1-1) ...
+Setting up python3-tk (3.5.1-1) ...
+license@license-VirtualBox:~$ python
+Python 2.7.12 (default, Dec  4 2017, 14:50:18) 
+[GCC 5.4.0 20160609] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import tensorflow
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ImportError: No module named tensorflow
+>>> exit
+Use exit() or Ctrl-D (i.e. EOF) to exit
+>>> exit()
+license@license-VirtualBox:~$ tensorflow -V
+tensorflow: command not found
+license@license-VirtualBox:~$ python -c 'import tensorflow as tf; print(tf.__version__)
+> exit()
+> 
+> 
+> 
+> exit()
+> ^C
+license@license-VirtualBox:~$ python3
+Python 3.5.2 (default, Nov 23 2017, 16:37:01) 
+[GCC 5.4.0 20160609] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import tensorflow as tf
+>>> tf.__version__
+'1.6.0'
+>>> exit
+Use exit() or Ctrl-D (i.e. EOF) to exit
+>>> exit()
+license@license-VirtualBox:~$ pip3 install tensorflow=1.2.1
+Invalid requirement: 'tensorflow=1.2.1'
+= is not a valid operator. Did you mean == ?
+You are using pip version 9.0.2, however version 9.0.3 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+license@license-VirtualBox:~$ pip3 install tensorflow==1.2.1
+Collecting tensorflow==1.2.1
+  Downloading tensorflow-1.2.1-cp35-cp35m-manylinux1_x86_64.whl (34.5MB)
+    100% |████████████████████████████████| 34.5MB 31kB/s 
+Requirement already satisfied: wheel>=0.26 in /usr/lib/python3/dist-packages (from tensorflow==1.2.1)
+Requirement already satisfied: werkzeug>=0.11.10 in /usr/local/lib/python3.5/dist-packages (from tensorflow==1.2.1)
+Requirement already satisfied: six>=1.10.0 in /usr/lib/python3/dist-packages (from tensorflow==1.2.1)
+Requirement already satisfied: protobuf>=3.2.0 in /usr/local/lib/python3.5/dist-packages (from tensorflow==1.2.1)
+Requirement already satisfied: numpy>=1.11.0 in /usr/local/lib/python3.5/dist-packages (from tensorflow==1.2.1)
+Requirement already satisfied: bleach==1.5.0 in /usr/local/lib/python3.5/dist-packages (from tensorflow==1.2.1)
+Collecting backports.weakref==1.0rc1 (from tensorflow==1.2.1)
+  Downloading backports.weakref-1.0rc1-py3-none-any.whl
+Requirement already satisfied: markdown>=2.6.8 in /usr/local/lib/python3.5/dist-packages (from tensorflow==1.2.1)
+Requirement already satisfied: html5lib==0.9999999 in /usr/local/lib/python3.5/dist-packages (from tensorflow==1.2.1)
+Requirement already satisfied: setuptools in /usr/lib/python3/dist-packages (from protobuf>=3.2.0->tensorflow==1.2.1)
+Installing collected packages: backports.weakref, tensorflow
+Exception:
+Traceback (most recent call last):
+  File "/home/license/.local/lib/python3.5/site-packages/pip/basecommand.py", line 215, in main
+    status = self.run(options, args)
+  File "/home/license/.local/lib/python3.5/site-packages/pip/commands/install.py", line 342, in run
+    prefix=options.prefix_path,
+  File "/home/license/.local/lib/python3.5/site-packages/pip/req/req_set.py", line 784, in install
+    **kwargs
+  File "/home/license/.local/lib/python3.5/site-packages/pip/req/req_install.py", line 851, in install
+    self.move_wheel_files(self.source_dir, root=root, prefix=prefix)
+  File "/home/license/.local/lib/python3.5/site-packages/pip/req/req_install.py", line 1064, in move_wheel_files
+    isolated=self.isolated,
+  File "/home/license/.local/lib/python3.5/site-packages/pip/wheel.py", line 345, in move_wheel_files
+    clobber(source, lib_dir, True)
+  File "/home/license/.local/lib/python3.5/site-packages/pip/wheel.py", line 316, in clobber
+    ensure_dir(destdir)
+  File "/home/license/.local/lib/python3.5/site-packages/pip/utils/__init__.py", line 83, in ensure_dir
+    os.makedirs(path)
+  File "/usr/lib/python3.5/os.py", line 241, in makedirs
+    mkdir(name, mode)
+PermissionError: [Errno 13] Permission denied: '/usr/local/lib/python3.5/dist-packages/backports'
+You are using pip version 9.0.2, however version 9.0.3 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+license@license-VirtualBox:~$ sudo pip3 install tensorflow==1.2.1
+[sudo] password for license: 
+The directory '/home/license/.cache/pip/http' or its parent directory is not owned by the current user and the cache has been disabled. Please check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
+The directory '/home/license/.cache/pip' or its parent directory is not owned by the current user and caching wheels has been disabled. check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
+Collecting tensorflow==1.2.1
+  Downloading tensorflow-1.2.1-cp35-cp35m-manylinux1_x86_64.whl (34.5MB)
+    100% |████████████████████████████████| 34.5MB 23kB/s 
+Requirement already satisfied: html5lib==0.9999999 in /usr/local/lib/python3.5/dist-packages (from tensorflow==1.2.1)
+Requirement already satisfied: wheel>=0.26 in /usr/lib/python3/dist-packages (from tensorflow==1.2.1)
+Requirement already satisfied: bleach==1.5.0 in /usr/local/lib/python3.5/dist-packages (from tensorflow==1.2.1)
+Requirement already satisfied: numpy>=1.11.0 in /usr/local/lib/python3.5/dist-packages (from tensorflow==1.2.1)
+Requirement already satisfied: werkzeug>=0.11.10 in /usr/local/lib/python3.5/dist-packages (from tensorflow==1.2.1)
+Requirement already satisfied: six>=1.10.0 in /usr/lib/python3/dist-packages (from tensorflow==1.2.1)
+Requirement already satisfied: markdown>=2.6.8 in /usr/local/lib/python3.5/dist-packages (from tensorflow==1.2.1)
+Requirement already satisfied: protobuf>=3.2.0 in /usr/local/lib/python3.5/dist-packages (from tensorflow==1.2.1)
+Collecting backports.weakref==1.0rc1 (from tensorflow==1.2.1)
+  Downloading backports.weakref-1.0rc1-py3-none-any.whl
+Requirement already satisfied: setuptools in /usr/lib/python3/dist-packages (from protobuf>=3.2.0->tensorflow==1.2.1)
+Installing collected packages: backports.weakref, tensorflow
+  Found existing installation: tensorflow 1.6.0
+    Uninstalling tensorflow-1.6.0:
+      Successfully uninstalled tensorflow-1.6.0
+Successfully installed backports.weakref-1.0rc1 tensorflow-1.2.1
+You are using pip version 9.0.2, however version 9.0.3 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+license@license-VirtualBox:~$ python3
+Python 3.5.2 (default, Nov 23 2017, 16:37:01) 
+[GCC 5.4.0 20160609] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import tensorflow as tf
+>>> tf.__version__
+'1.2.1'
+>>> exit()
+license@license-VirtualBox:~$ pip3 install tensorflow
+Requirement already satisfied: tensorflow in /usr/local/lib/python3.5/dist-packages
+Requirement already satisfied: werkzeug>=0.11.10 in /usr/local/lib/python3.5/dist-packages (from tensorflow)
+Requirement already satisfied: wheel>=0.26 in /usr/lib/python3/dist-packages (from tensorflow)
+Requirement already satisfied: html5lib==0.9999999 in /usr/local/lib/python3.5/dist-packages (from tensorflow)
+Requirement already satisfied: six>=1.10.0 in /usr/lib/python3/dist-packages (from tensorflow)
+Requirement already satisfied: numpy>=1.11.0 in /usr/local/lib/python3.5/dist-packages (from tensorflow)
+Requirement already satisfied: backports.weakref==1.0rc1 in /usr/local/lib/python3.5/dist-packages (from tensorflow)
+Requirement already satisfied: markdown>=2.6.8 in /usr/local/lib/python3.5/dist-packages (from tensorflow)
+Requirement already satisfied: protobuf>=3.2.0 in /usr/local/lib/python3.5/dist-packages (from tensorflow)
+Requirement already satisfied: bleach==1.5.0 in /usr/local/lib/python3.5/dist-packages (from tensorflow)
+Requirement already satisfied: setuptools in /usr/lib/python3/dist-packages (from protobuf>=3.2.0->tensorflow)
+You are using pip version 9.0.2, however version 9.0.3 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+license@license-VirtualBox:~$ sudo pip3 install --upgrade tensorflow
+The directory '/home/license/.cache/pip/http' or its parent directory is not owned by the current user and the cache has been disabled. Please check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
+The directory '/home/license/.cache/pip' or its parent directory is not owned by the current user and caching wheels has been disabled. check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
+Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<pip._vendor.urllib3.connection.VerifiedHTTPSConnection object at 0x7f8cd4aaa8d0>: Failed to establish a new connection: [Errno -2] Name or service not known',)': /simple/tensorflow/
+Retrying (Retry(total=3, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectTimeoutError(<pip._vendor.urllib3.connection.VerifiedHTTPSConnection object at 0x7f8cd4aaa128>, 'Connection to pypi.python.org timed out. (connect timeout=15)')': /simple/tensorflow/
+Collecting tensorflow
+  Downloading tensorflow-1.6.0-cp35-cp35m-manylinux1_x86_64.whl (45.8MB)
+    100% |████████████████████████████████| 45.9MB 11kB/s 
+Collecting wheel>=0.26 (from tensorflow)
+  Downloading wheel-0.30.0-py2.py3-none-any.whl (49kB)
+    100% |████████████████████████████████| 51kB 254kB/s 
+Requirement already up-to-date: numpy>=1.13.3 in /usr/local/lib/python3.5/dist-packages (from tensorflow)
+Requirement already up-to-date: protobuf>=3.4.0 in /usr/local/lib/python3.5/dist-packages (from tensorflow)
+Collecting six>=1.10.0 (from tensorflow)
+  Downloading six-1.11.0-py2.py3-none-any.whl
+Requirement already up-to-date: astor>=0.6.0 in /usr/local/lib/python3.5/dist-packages (from tensorflow)
+Requirement already up-to-date: termcolor>=1.1.0 in /usr/local/lib/python3.5/dist-packages (from tensorflow)
+Requirement already up-to-date: gast>=0.2.0 in /usr/local/lib/python3.5/dist-packages (from tensorflow)
+Requirement already up-to-date: grpcio>=1.8.6 in /usr/local/lib/python3.5/dist-packages (from tensorflow)
+Requirement already up-to-date: absl-py>=0.1.6 in /usr/local/lib/python3.5/dist-packages (from tensorflow)
+Requirement already up-to-date: tensorboard<1.7.0,>=1.6.0 in /usr/local/lib/python3.5/dist-packages (from tensorflow)
+Collecting setuptools (from protobuf>=3.4.0->tensorflow)
+  Downloading setuptools-39.0.1-py2.py3-none-any.whl (569kB)
+    100% |████████████████████████████████| 573kB 183kB/s 
+Requirement already up-to-date: markdown>=2.6.8 in /usr/local/lib/python3.5/dist-packages (from tensorboard<1.7.0,>=1.6.0->tensorflow)
+Requirement already up-to-date: html5lib==0.9999999 in /usr/local/lib/python3.5/dist-packages (from tensorboard<1.7.0,>=1.6.0->tensorflow)
+Requirement already up-to-date: werkzeug>=0.11.10 in /usr/local/lib/python3.5/dist-packages (from tensorboard<1.7.0,>=1.6.0->tensorflow)
+Requirement already up-to-date: bleach==1.5.0 in /usr/local/lib/python3.5/dist-packages (from tensorboard<1.7.0,>=1.6.0->tensorflow)
+Installing collected packages: wheel, six, tensorflow, setuptools
+  Found existing installation: wheel 0.29.0
+    Uninstalling wheel-0.29.0:
+      Successfully uninstalled wheel-0.29.0
+  Found existing installation: six 1.10.0
+    Uninstalling six-1.10.0:
+      Successfully uninstalled six-1.10.0
+  Found existing installation: tensorflow 1.2.1
+    Uninstalling tensorflow-1.2.1:
+      Successfully uninstalled tensorflow-1.2.1
+  Found existing installation: setuptools 20.7.0
+    Uninstalling setuptools-20.7.0:
+      Successfully uninstalled setuptools-20.7.0
+Successfully installed setuptools-39.0.1 six-1.11.0 tensorflow-1.6.0 wheel-0.30.0
+You are using pip version 9.0.2, however version 9.0.3 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+license@license-VirtualBox:~$ python3
+Python 3.5.2 (default, Nov 23 2017, 16:37:01) 
+[GCC 5.4.0 20160609] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import tensorflow as tf
+>>> tf.__version__
+'1.6.0'
+>>> exit()
+license@license-VirtualBox:~$ 
