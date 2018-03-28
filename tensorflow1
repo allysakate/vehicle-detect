@@ -1,0 +1,424 @@
+license@license-VirtualBox:~/models/research/object_detection$ python3 object_detection_tutorial.py
+Traceback (most recent call last):
+  File "/usr/lib/python3.5/tkinter/__init__.py", line 36, in <module>
+    import _tkinter
+ImportError: No module named '_tkinter'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "object_detection_tutorial.py", line 11, in <module>
+    from matplotlib import pyplot as plt
+  File "/usr/local/lib/python3.5/dist-packages/matplotlib/pyplot.py", line 115, in <module>
+    _backend_mod, new_figure_manager, draw_if_interactive, _show = pylab_setup()
+  File "/usr/local/lib/python3.5/dist-packages/matplotlib/backends/__init__.py", line 62, in pylab_setup
+    [backend_name], 0)
+  File "/usr/local/lib/python3.5/dist-packages/matplotlib/backends/backend_tkagg.py", line 4, in <module>
+    from . import tkagg  # Paint image to Tk photo blitter extension.
+  File "/usr/local/lib/python3.5/dist-packages/matplotlib/backends/tkagg.py", line 5, in <module>
+    from six.moves import tkinter as Tk
+  File "/usr/lib/python3/dist-packages/six.py", line 92, in __get__
+    result = self._resolve()
+  File "/usr/lib/python3/dist-packages/six.py", line 115, in _resolve
+    return _import_module(self.mod)
+  File "/usr/lib/python3/dist-packages/six.py", line 82, in _import_module
+    __import__(name)
+  File "/usr/lib/python3.5/tkinter/__init__.py", line 38, in <module>
+    raise ImportError(str(msg) + ', please install the python3-tk package')
+ImportError: No module named '_tkinter', please install the python3-tk package
+license@license-VirtualBox:~/models/research/object_detection$ pip3 install python3-tk
+Collecting python3-tk
+  Could not find a version that satisfies the requirement python3-tk (from versions: )
+No matching distribution found for python3-tk
+You are using pip version 9.0.2, however version 9.0.3 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+license@license-VirtualBox:~/models/research/object_detection$ pip3 install python3-tk
+Collecting python3-tk
+  Could not find a version that satisfies the requirement python3-tk (from versions: )
+No matching distribution found for python3-tk
+You are using pip version 9.0.2, however version 9.0.3 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+license@license-VirtualBox:~/models/research/object_detection$ python3 object_detection_tutorial.py
+Traceback (most recent call last):
+  File "/usr/lib/python3.5/tkinter/__init__.py", line 36, in <module>
+    import _tkinter
+ImportError: No module named '_tkinter'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "object_detection_tutorial.py", line 11, in <module>
+    from matplotlib import pyplot as plt
+  File "/usr/local/lib/python3.5/dist-packages/matplotlib/pyplot.py", line 115, in <module>
+    _backend_mod, new_figure_manager, draw_if_interactive, _show = pylab_setup()
+  File "/usr/local/lib/python3.5/dist-packages/matplotlib/backends/__init__.py", line 62, in pylab_setup
+    [backend_name], 0)
+  File "/usr/local/lib/python3.5/dist-packages/matplotlib/backends/backend_tkagg.py", line 4, in <module>
+    from . import tkagg  # Paint image to Tk photo blitter extension.
+  File "/usr/local/lib/python3.5/dist-packages/matplotlib/backends/tkagg.py", line 5, in <module>
+    from six.moves import tkinter as Tk
+  File "/usr/lib/python3/dist-packages/six.py", line 92, in __get__
+    result = self._resolve()
+  File "/usr/lib/python3/dist-packages/six.py", line 115, in _resolve
+    return _import_module(self.mod)
+  File "/usr/lib/python3/dist-packages/six.py", line 82, in _import_module
+    __import__(name)
+  File "/usr/lib/python3.5/tkinter/__init__.py", line 38, in <module>
+    raise ImportError(str(msg) + ', please install the python3-tk package')
+ImportError: No module named '_tkinter', please install the python3-tk package
+license@license-VirtualBox:~/models/research/object_detection$ python3 object_detection_tutorial.py
+Traceback (most recent call last):
+  File "object_detection_tutorial.py", line 14, in <module>
+    import cv2
+ImportError: No module named 'cv2'
+license@license-VirtualBox:~/models/research/object_detection$ pip3 opencv-python
+ERROR: unknown command "opencv-python"
+license@license-VirtualBox:~/models/research/object_detection$ pip3 install opencv-python
+Collecting opencv-python
+  Downloading opencv_python-3.4.0.12-cp35-cp35m-manylinux1_x86_64.whl (24.9MB)
+    100% |████████████████████████████████| 24.9MB 40kB/s 
+Requirement already satisfied: numpy>=1.11.1 in /usr/local/lib/python3.5/dist-packages (from opencv-python)
+Installing collected packages: opencv-python
+Exception:
+Traceback (most recent call last):
+  File "/home/license/.local/lib/python3.5/site-packages/pip/basecommand.py", line 215, in main
+    status = self.run(options, args)
+  File "/home/license/.local/lib/python3.5/site-packages/pip/commands/install.py", line 342, in run
+    prefix=options.prefix_path,
+  File "/home/license/.local/lib/python3.5/site-packages/pip/req/req_set.py", line 784, in install
+    **kwargs
+  File "/home/license/.local/lib/python3.5/site-packages/pip/req/req_install.py", line 851, in install
+    self.move_wheel_files(self.source_dir, root=root, prefix=prefix)
+  File "/home/license/.local/lib/python3.5/site-packages/pip/req/req_install.py", line 1064, in move_wheel_files
+    isolated=self.isolated,
+  File "/home/license/.local/lib/python3.5/site-packages/pip/wheel.py", line 345, in move_wheel_files
+    clobber(source, lib_dir, True)
+  File "/home/license/.local/lib/python3.5/site-packages/pip/wheel.py", line 316, in clobber
+    ensure_dir(destdir)
+  File "/home/license/.local/lib/python3.5/site-packages/pip/utils/__init__.py", line 83, in ensure_dir
+    os.makedirs(path)
+  File "/usr/lib/python3.5/os.py", line 241, in makedirs
+    mkdir(name, mode)
+PermissionError: [Errno 13] Permission denied: '/usr/local/lib/python3.5/dist-packages/opencv_python-3.4.0.12.dist-info'
+You are using pip version 9.0.2, however version 9.0.3 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+license@license-VirtualBox:~/models/research/object_detection$ sudo pip3 install opencv-python
+[sudo] password for license: 
+The directory '/home/license/.cache/pip/http' or its parent directory is not owned by the current user and the cache has been disabled. Please check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
+The directory '/home/license/.cache/pip' or its parent directory is not owned by the current user and caching wheels has been disabled. check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
+Collecting opencv-python
+  Downloading opencv_python-3.4.0.12-cp35-cp35m-manylinux1_x86_64.whl (24.9MB)
+    100% |████████████████████████████████| 24.9MB 43kB/s 
+Requirement already satisfied: numpy>=1.11.1 in /usr/local/lib/python3.5/dist-packages (from opencv-python)
+Installing collected packages: opencv-python
+Successfully installed opencv-python-3.4.0.12
+You are using pip version 9.0.2, however version 9.0.3 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+license@license-VirtualBox:~/models/research/object_detection$ python3 object_detection_tutorial.py
+/home/license/models/research/object_detection/utils/visualization_utils.py:25: UserWarning: 
+This call to matplotlib.use() has no effect because the backend has already
+been chosen; matplotlib.use() must be called *before* pylab, matplotlib.pyplot,
+or matplotlib.backends is imported for the first time.
+
+The backend was *originally* set to 'TkAgg' by the following code:
+  File "object_detection_tutorial.py", line 11, in <module>
+    from matplotlib import pyplot as plt
+  File "/usr/local/lib/python3.5/dist-packages/matplotlib/pyplot.py", line 71, in <module>
+    from matplotlib.backends import pylab_setup
+  File "/usr/local/lib/python3.5/dist-packages/matplotlib/backends/__init__.py", line 16, in <module>
+    line for line in traceback.format_stack()
+
+
+  import matplotlib; matplotlib.use('Agg')  # pylint: disable=multiple-statements
+Traceback (most recent call last):
+  File "/usr/lib/python3.5/urllib/request.py", line 1698, in open
+    return getattr(self, name)(url)
+  File "/usr/lib/python3.5/urllib/request.py", line 1877, in open_http
+    return self._open_generic_http(http.client.HTTPConnection, url, data)
+  File "/usr/lib/python3.5/urllib/request.py", line 1857, in _open_generic_http
+    http_conn.request("GET", selector, headers=headers)
+  File "/usr/lib/python3.5/http/client.py", line 1106, in request
+    self._send_request(method, url, body, headers)
+  File "/usr/lib/python3.5/http/client.py", line 1151, in _send_request
+    self.endheaders(body)
+  File "/usr/lib/python3.5/http/client.py", line 1102, in endheaders
+    self._send_output(message_body)
+  File "/usr/lib/python3.5/http/client.py", line 934, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.5/http/client.py", line 877, in send
+    self.connect()
+  File "/usr/lib/python3.5/http/client.py", line 849, in connect
+    (self.host,self.port), self.timeout, self.source_address)
+  File "/usr/lib/python3.5/socket.py", line 693, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+  File "/usr/lib/python3.5/socket.py", line 732, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "object_detection_tutorial.py", line 60, in <module>
+    opener.retrieve(DOWNLOAD_BASE + MODEL_FILE, MODEL_FILE)
+  File "/usr/lib/python3.5/urllib/request.py", line 1732, in retrieve
+    fp = self.open(url, data)
+  File "/usr/lib/python3.5/urllib/request.py", line 1704, in open
+    raise OSError('socket error', msg).with_traceback(sys.exc_info()[2])
+  File "/usr/lib/python3.5/urllib/request.py", line 1698, in open
+    return getattr(self, name)(url)
+  File "/usr/lib/python3.5/urllib/request.py", line 1877, in open_http
+    return self._open_generic_http(http.client.HTTPConnection, url, data)
+  File "/usr/lib/python3.5/urllib/request.py", line 1857, in _open_generic_http
+    http_conn.request("GET", selector, headers=headers)
+  File "/usr/lib/python3.5/http/client.py", line 1106, in request
+    self._send_request(method, url, body, headers)
+  File "/usr/lib/python3.5/http/client.py", line 1151, in _send_request
+    self.endheaders(body)
+  File "/usr/lib/python3.5/http/client.py", line 1102, in endheaders
+    self._send_output(message_body)
+  File "/usr/lib/python3.5/http/client.py", line 934, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.5/http/client.py", line 877, in send
+    self.connect()
+  File "/usr/lib/python3.5/http/client.py", line 849, in connect
+    (self.host,self.port), self.timeout, self.source_address)
+  File "/usr/lib/python3.5/socket.py", line 693, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+  File "/usr/lib/python3.5/socket.py", line 732, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+OSError: [Errno socket error] [Errno -3] Temporary failure in name resolution
+license@license-VirtualBox:~/models/research/object_detection$ 
+license@license-VirtualBox:~/models/research/object_detection$ python3 object_detection_tutorial.py
+Traceback (most recent call last):
+  File "object_detection_tutorial.py", line 12, in <module>
+    matplotlib.use('Agg')
+NameError: name 'matplotlib' is not defined
+license@license-VirtualBox:~/models/research/object_detection$ python3 object_detection_tutorial.py
+Traceback (most recent call last):
+  File "/usr/lib/python3.5/urllib/request.py", line 1698, in open
+    return getattr(self, name)(url)
+  File "/usr/lib/python3.5/urllib/request.py", line 1877, in open_http
+    return self._open_generic_http(http.client.HTTPConnection, url, data)
+  File "/usr/lib/python3.5/urllib/request.py", line 1860, in _open_generic_http
+    response = http_conn.getresponse()
+  File "/usr/lib/python3.5/http/client.py", line 1197, in getresponse
+    response.begin()
+  File "/usr/lib/python3.5/http/client.py", line 297, in begin
+    version, status, reason = self._read_status()
+  File "/usr/lib/python3.5/http/client.py", line 258, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/usr/lib/python3.5/socket.py", line 575, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "object_detection_tutorial.py", line 63, in <module>
+    opener.retrieve(DOWNLOAD_BASE + MODEL_FILE, MODEL_FILE)
+  File "/usr/lib/python3.5/urllib/request.py", line 1732, in retrieve
+    fp = self.open(url, data)
+  File "/usr/lib/python3.5/urllib/request.py", line 1704, in open
+    raise OSError('socket error', msg).with_traceback(sys.exc_info()[2])
+  File "/usr/lib/python3.5/urllib/request.py", line 1698, in open
+    return getattr(self, name)(url)
+  File "/usr/lib/python3.5/urllib/request.py", line 1877, in open_http
+    return self._open_generic_http(http.client.HTTPConnection, url, data)
+  File "/usr/lib/python3.5/urllib/request.py", line 1860, in _open_generic_http
+    response = http_conn.getresponse()
+  File "/usr/lib/python3.5/http/client.py", line 1197, in getresponse
+    response.begin()
+  File "/usr/lib/python3.5/http/client.py", line 297, in begin
+    version, status, reason = self._read_status()
+  File "/usr/lib/python3.5/http/client.py", line 258, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/usr/lib/python3.5/socket.py", line 575, in readinto
+    return self._sock.recv_into(b)
+OSError: [Errno socket error] [Errno 104] Connection reset by peer
+license@license-VirtualBox:~/models/research/object_detection$ python3 object_detection_tutorial.py
+Traceback (most recent call last):
+  File "/usr/lib/python3.5/urllib/request.py", line 1698, in open
+    return getattr(self, name)(url)
+  File "/usr/lib/python3.5/urllib/request.py", line 1877, in open_http
+    return self._open_generic_http(http.client.HTTPConnection, url, data)
+  File "/usr/lib/python3.5/urllib/request.py", line 1857, in _open_generic_http
+    http_conn.request("GET", selector, headers=headers)
+  File "/usr/lib/python3.5/http/client.py", line 1106, in request
+    self._send_request(method, url, body, headers)
+  File "/usr/lib/python3.5/http/client.py", line 1151, in _send_request
+    self.endheaders(body)
+  File "/usr/lib/python3.5/http/client.py", line 1102, in endheaders
+    self._send_output(message_body)
+  File "/usr/lib/python3.5/http/client.py", line 934, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.5/http/client.py", line 877, in send
+    self.connect()
+  File "/usr/lib/python3.5/http/client.py", line 849, in connect
+    (self.host,self.port), self.timeout, self.source_address)
+  File "/usr/lib/python3.5/socket.py", line 711, in create_connection
+    raise err
+  File "/usr/lib/python3.5/socket.py", line 702, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "object_detection_tutorial.py", line 63, in <module>
+    opener.retrieve(DOWNLOAD_BASE + MODEL_FILE, MODEL_FILE)
+  File "/usr/lib/python3.5/urllib/request.py", line 1732, in retrieve
+    fp = self.open(url, data)
+  File "/usr/lib/python3.5/urllib/request.py", line 1704, in open
+    raise OSError('socket error', msg).with_traceback(sys.exc_info()[2])
+  File "/usr/lib/python3.5/urllib/request.py", line 1698, in open
+    return getattr(self, name)(url)
+  File "/usr/lib/python3.5/urllib/request.py", line 1877, in open_http
+    return self._open_generic_http(http.client.HTTPConnection, url, data)
+  File "/usr/lib/python3.5/urllib/request.py", line 1857, in _open_generic_http
+    http_conn.request("GET", selector, headers=headers)
+  File "/usr/lib/python3.5/http/client.py", line 1106, in request
+    self._send_request(method, url, body, headers)
+  File "/usr/lib/python3.5/http/client.py", line 1151, in _send_request
+    self.endheaders(body)
+  File "/usr/lib/python3.5/http/client.py", line 1102, in endheaders
+    self._send_output(message_body)
+  File "/usr/lib/python3.5/http/client.py", line 934, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.5/http/client.py", line 877, in send
+    self.connect()
+  File "/usr/lib/python3.5/http/client.py", line 849, in connect
+    (self.host,self.port), self.timeout, self.source_address)
+  File "/usr/lib/python3.5/socket.py", line 711, in create_connection
+    raise err
+  File "/usr/lib/python3.5/socket.py", line 702, in create_connection
+    sock.connect(sa)
+OSError: [Errno socket error] [Errno 101] Network is unreachable
+license@license-VirtualBox:~/models/research/object_detection$ python3 object_detection_tutorial.py
+2018-03-28 17:07:34.994758: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2
+Traceback (most recent call last):
+  File "object_detection_tutorial.py", line 138, in <module>
+    feed_dict={image_tensor: image_np_expanded})
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/client/session.py", line 905, in run
+    run_metadata_ptr)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/client/session.py", line 1106, in _run
+    np_val = np.asarray(subfeed_val, dtype=subfeed_dtype)
+  File "/usr/local/lib/python3.5/dist-packages/numpy/core/numeric.py", line 492, in asarray
+    return array(a, dtype, copy=False, order=order)
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'NoneType'
+license@license-VirtualBox:~/models/research/object_detection$ python3 object_detection_tutorial.py
+Traceback (most recent call last):
+  File "/usr/lib/python3.5/urllib/request.py", line 1698, in open
+    return getattr(self, name)(url)
+  File "/usr/lib/python3.5/urllib/request.py", line 1877, in open_http
+    return self._open_generic_http(http.client.HTTPConnection, url, data)
+  File "/usr/lib/python3.5/urllib/request.py", line 1857, in _open_generic_http
+    http_conn.request("GET", selector, headers=headers)
+  File "/usr/lib/python3.5/http/client.py", line 1106, in request
+    self._send_request(method, url, body, headers)
+  File "/usr/lib/python3.5/http/client.py", line 1151, in _send_request
+    self.endheaders(body)
+  File "/usr/lib/python3.5/http/client.py", line 1102, in endheaders
+    self._send_output(message_body)
+  File "/usr/lib/python3.5/http/client.py", line 934, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.5/http/client.py", line 877, in send
+    self.connect()
+  File "/usr/lib/python3.5/http/client.py", line 849, in connect
+    (self.host,self.port), self.timeout, self.source_address)
+  File "/usr/lib/python3.5/socket.py", line 693, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+  File "/usr/lib/python3.5/socket.py", line 732, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "object_detection_tutorial.py", line 63, in <module>
+    opener.retrieve(DOWNLOAD_BASE + MODEL_FILE, MODEL_FILE)
+  File "/usr/lib/python3.5/urllib/request.py", line 1732, in retrieve
+    fp = self.open(url, data)
+  File "/usr/lib/python3.5/urllib/request.py", line 1704, in open
+    raise OSError('socket error', msg).with_traceback(sys.exc_info()[2])
+  File "/usr/lib/python3.5/urllib/request.py", line 1698, in open
+    return getattr(self, name)(url)
+  File "/usr/lib/python3.5/urllib/request.py", line 1877, in open_http
+    return self._open_generic_http(http.client.HTTPConnection, url, data)
+  File "/usr/lib/python3.5/urllib/request.py", line 1857, in _open_generic_http
+    http_conn.request("GET", selector, headers=headers)
+  File "/usr/lib/python3.5/http/client.py", line 1106, in request
+    self._send_request(method, url, body, headers)
+  File "/usr/lib/python3.5/http/client.py", line 1151, in _send_request
+    self.endheaders(body)
+  File "/usr/lib/python3.5/http/client.py", line 1102, in endheaders
+    self._send_output(message_body)
+  File "/usr/lib/python3.5/http/client.py", line 934, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.5/http/client.py", line 877, in send
+    self.connect()
+  File "/usr/lib/python3.5/http/client.py", line 849, in connect
+    (self.host,self.port), self.timeout, self.source_address)
+  File "/usr/lib/python3.5/socket.py", line 693, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+  File "/usr/lib/python3.5/socket.py", line 732, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+OSError: [Errno socket error] [Errno -3] Temporary failure in name resolution
+license@license-VirtualBox:~/models/research/object_detection$ python3 object_detection_tutorial.py
+2018-03-28 17:40:47.968323: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
+2018-03-28 17:40:47.968433: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
+2018-03-28 17:40:47.968485: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
+2018-03-28 17:40:47.968555: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX2 instructions, but these are available on your machine and could speed up CPU computations.
+Traceback (most recent call last):
+  File "object_detection_tutorial.py", line 138, in <module>
+    feed_dict={image_tensor: image_np_expanded})
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/client/session.py", line 789, in run
+    run_metadata_ptr)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/client/session.py", line 968, in _run
+    np_val = np.asarray(subfeed_val, dtype=subfeed_dtype)
+  File "/usr/local/lib/python3.5/dist-packages/numpy/core/numeric.py", line 492, in asarray
+    return array(a, dtype, copy=False, order=order)
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'NoneType'
+license@license-VirtualBox:~/models/research/object_detection$ python3 object_detection_tutorial.py
+2018-03-28 17:43:02.750314: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
+2018-03-28 17:43:02.750451: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
+2018-03-28 17:43:02.750506: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
+2018-03-28 17:43:02.750555: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX2 instructions, but these are available on your machine and could speed up CPU computations.
+Traceback (most recent call last):
+  File "object_detection_tutorial.py", line 138, in <module>
+    feed_dict={image_tensor: image_np_expanded})
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/client/session.py", line 789, in run
+    run_metadata_ptr)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/client/session.py", line 968, in _run
+    np_val = np.asarray(subfeed_val, dtype=subfeed_dtype)
+  File "/usr/local/lib/python3.5/dist-packages/numpy/core/numeric.py", line 492, in asarray
+    return array(a, dtype, copy=False, order=order)
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'NoneType'
+license@license-VirtualBox:~/models/research/object_detection$ python3 object_detection_tutorial.py
+2018-03-28 17:50:32.962380: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2
+Traceback (most recent call last):
+  File "object_detection_tutorial.py", line 138, in <module>
+    feed_dict={image_tensor: image_np_expanded})
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/client/session.py", line 905, in run
+    run_metadata_ptr)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/client/session.py", line 1106, in _run
+    np_val = np.asarray(subfeed_val, dtype=subfeed_dtype)
+  File "/usr/local/lib/python3.5/dist-packages/numpy/core/numeric.py", line 492, in asarray
+    return array(a, dtype, copy=False, order=order)
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'NoneType'
+license@license-VirtualBox:~/models/research/object_detection$ python3 object_detection_tutorial.py
+2018-03-28 17:51:42.342178: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2
+Traceback (most recent call last):
+  File "object_detection_tutorial.py", line 138, in <module>
+    feed_dict={image_tensor: image_np_expanded})
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/client/session.py", line 905, in run
+    run_metadata_ptr)
+  File "/usr/local/lib/python3.5/dist-packages/tensorflow/python/client/session.py", line 1106, in _run
+    np_val = np.asarray(subfeed_val, dtype=subfeed_dtype)
+  File "/usr/local/lib/python3.5/dist-packages/numpy/core/numeric.py", line 492, in asarray
+    return array(a, dtype, copy=False, order=order)
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'NoneType'
+license@license-VirtualBox:~/models/research/object_detection$ python3 object_detection_tutorial.py
+2018-03-28 17:57:14.051673: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2
+license@license-VirtualBox:~/models/research/object_detection$ python3 object_detection_tutorial.py
+2018-03-28 17:58:28.749677: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2
+license@license-VirtualBox:~/models/research/object_detection$ 
